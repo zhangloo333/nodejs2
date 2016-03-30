@@ -50,7 +50,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/person/:id', function(req, res) {
-	res.render('person', { ID: req.params.id });
+	res.render('person', { ID: req.params.id }); // person 是template里面的html名字，ID是变量名
 });
 
 app.get('/api', function(req, res) {

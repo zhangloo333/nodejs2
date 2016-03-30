@@ -1,6 +1,6 @@
 /*
 怎么用 nodejs build a baic server:
-1 requre module http
+1 require module http
 2. use creatServer() method to build 
 3. inside creatServer(（req,res）＝> {}), there are two parametter, req, res.
 	一旦server reciever 了 req请求的情况下， res做出动作。
