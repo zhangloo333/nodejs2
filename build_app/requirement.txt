@@ -1,0 +1,49 @@
+user can add, edit ,delete 'todos'
+Each todo can be marked as complete
+Each todo can have one optional file attachment
+one person cannot access the todos of antoher.
+
+1. initial setupe
+	init the folder : npm init
+	install express : npm install express --save-dev
+	install ejs : npm install ejs --save-dev
+	install body-parser: npm install body-parser --save-dev
+	install mongoDB: npm install Mongoose --save-dev
+
+2. setup your MongoDB deployments
+	https://mlab.com
+	creatnew->single free->给名字－>点击进入－>创建一个用户（同时给密码和帐号）
+	配置一个config的文件。以至于以后可一重复利用。
+	build config.js 然后把用户名写进去，然后build一个index.js然后本地要求require('./config');
+
+	把在mango 给的
+	  mongodb://<dbuser>:<dbpassword>@ds011880.mlab.com:11880/todolist_z
+
+	  只是把<dbuser> & <dbpassword> 用你自己的user and pws 给替换掉了。
+
+	make a new folder: model-> build a todoModel.js--> Schema 主要给data 有一个什么样的结构。并留出借口，导出
+
+	goto-app.js connect to database.
+	add require config
+	var config = require('./config');
+	require mongoose:
+	var mongoose = require('mongoose');
+	然后进行连接： 
+	mongoose.connect(config.getDbConnectionString());
+
+3. adding some data to MangoDB.
+	seed data: initial data when you first time put data in database.
+	建立一个controllers然后 引用model里面的数据。
+
+	怎么产生一个json的虚假数据，用编程的方法；jsongenerater. 
+	http://beta.json-generator.com/Ekcc_NBRe
+
+	当连接get的方法的时候，之行操作：
+	表格模版.create(数据，callbackfn)
+	callbackfn 把结果发送回这个id。
+
+
+
+
+
+
