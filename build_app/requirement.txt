@@ -42,6 +42,11 @@ one person cannot access the todos of antoher.
 	表格模版.create(数据，callbackfn)
 	callbackfn 把结果发送回这个id。
 
+Creat our API:
+	1. under the controler folder: add-- apiControler.js
+	2 apiControler.js: import 包；把数据库的包都拿过来。
+	bodyParser是一个middleware 可以把request后面添加上post的内容。
+	Javascript如果想返回好几个变量的情况下，就用一个callback fn把把返回来的参数，做处理。
 
 
 
